@@ -1,4 +1,9 @@
+using Microsoft.EntityFrameworkCore;
+using Identity.Data;
+
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<MasterContext>(options => options.UseSqlServer(
+        builder.Configuration.GetConnectionString("IdentityConnection")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
