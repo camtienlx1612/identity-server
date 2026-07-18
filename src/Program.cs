@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using Identity.Data;
+using Identity.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<MasterContext>(options => options.UseSqlServer(
